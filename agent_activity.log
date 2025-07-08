@@ -1,38 +1,911 @@
-2025-06-26 13:50:34,641 - autonomous_app_writer.core.logging_setup - INFO - Logging configured.
-2025-06-26 13:50:34,641 - __main__ - INFO - AUTONOMOUS APP-WRITING AGENT INITIALIZING...
-2025-06-26 13:50:34,641 - __main__ - INFO - Received user request: Create a simple Python script that prints 'Hello, World!'
-2025-06-26 13:50:34,641 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: New app development request received.
-2025-06-26 13:50:34,641 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Starting S1 Requirements Elicitation.
-2025-06-26 13:50:34,641 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Requirements for project proj_mvp_user_5821 clarified.
-2025-06-26 13:50:34,641 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Handing off to S3 Operational Management.
-2025-06-26 13:50:34,641 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project proj_mvp_user_5821
-2025-06-26 13:50:34,641 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Decomposed requirements into 1 tasks.
-2025-06-26 13:50:34,641 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Assigning task task_01 to S1 Coder Agent.
-2025-06-26 13:51:19,872 - autonomous_app_writer.core.logging_setup - INFO - Logging configured.
-2025-06-26 13:51:19,872 - __main__ - INFO - AUTONOMOUS APP-WRITING AGENT INITIALIZING...
-2025-06-26 13:51:19,872 - __main__ - INFO - Received user request: Create a simple Python script that prints 'Hello, World!'
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: New app development request received.
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Starting S1 Requirements Elicitation.
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Requirements for project proj_mvp_user_3549 clarified.
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Handing off to S3 Operational Management.
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project proj_mvp_user_3549
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Decomposed requirements into 1 tasks.
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Assigning task task_01 to S1 Coder Agent.
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system1_operational_agents.coding_agents.simple_script_coder_agent - INFO - S1.CodeScript: Executing minimal task task_01
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Task task_01 completed successfully.
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: All tasks completed. Packaging final application.
-2025-06-26 13:51:19,873 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Development lifecycle completed successfully for proj_mvp_user_3549
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: S3 finished. Outcome: SUCCESS
-2025-06-26 13:51:19,873 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: App proj_mvp_user_3549 developed successfully.
-2025-06-26 13:51:19,873 - __main__ - INFO - App development finished with result: {'status': 'SUCCESS', 'app_details': {'files': {'generated_script.py': "print('Hello, World! This is the minimal viable script.')"}}}
-2025-06-26 13:51:19,873 - __main__ - INFO - AGENT SHUTDOWN.
-2025-06-26 13:51:47,378 - autonomous_app_writer.core.logging_setup - INFO - Logging configured.
-2025-06-26 13:51:47,378 - __main__ - INFO - AUTONOMOUS APP-WRITING AGENT INITIALIZING...
-2025-06-26 13:51:47,378 - __main__ - INFO - Received user request: Create a simple Python script that prints 'Hello, World!'
-2025-06-26 13:51:47,378 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: New app development request received.
-2025-06-26 13:51:47,378 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Starting S1 Requirements Elicitation.
-2025-06-26 13:51:47,378 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Requirements for project proj_mvp_user_8799 clarified.
-2025-06-26 13:51:47,378 - autonomous_app_writer.workflows.app_development_main_flow - INFO - S_AGENT: Handing off to S3 Operational Management.
-2025-06-26 13:51:47,378 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project proj_mvp_user_8799
-2025-06-26 13:51:47,378 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Decomposed requirements into 1 tasks.
-2025-06-26 13:51:47,378 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Assigning task task_01 to S1 Coder Agent.
+2025-06-26 15:32:57,973 - autonomous_app_writer.core.agent_state - WARNING - S5 policy file not found at vsm_knowledge_base/system5_policies.json. Using default policies.
+2025-06-26 15:32:57,973 - autonomous_app_writer.core.agent_state - INFO - S5 policies saved to vsm_knowledge_base/system5_policies.json
+2025-06-26 15:32:57,973 - autonomous_app_writer.core.agent_state - WARNING - S4 knowledge file not found at vsm_knowledge_base/system4_knowledge.json. Initializing empty knowledge base.
+2025-06-26 15:32:57,973 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge saved to vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:32:57,973 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:32:57,974 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: openai
+2025-06-26 15:32:57,974 - autonomous_app_writer.core.llm_services - WARNING - API key for openai is not configured.
+2025-06-26 15:32:57,975 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:33:33,518 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:33:33,518 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:33:33,518 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:33:33,519 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: openai
+2025-06-26 15:33:33,519 - autonomous_app_writer.core.llm_services - WARNING - API key for openai is not configured.
+2025-06-26 15:33:33,519 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:33:34,630 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:33:34,632 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:33:34,643 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:33:34,643 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:33:34,643 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:33:34,643 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:33:34,643 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:33:34,643 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:33:34,643 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:33:34,643 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:33:34,643 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:33:34,643 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:33:34,644 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:33:34,644 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:33:34,644 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:33:34,644 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:33:34,644 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:33:34,644 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:33:34,644 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:33:34,644 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:33:34,644 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:34,645 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:34,645 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: Mock response for prompt: '
+        Analyze the following data collected from the software development environment.
+        Synthesize the key insights, trends, and actionable recommendations.
+
+        Tech Trends Data:
+        Article: 'Why Rust is the future of systems programming'. Trend: 'Adoption of memory-safe languages'.
+
+        Security Threats Data:
+        CVE-2025-XXXX: Critical vulnerability in popular 'json-parser' library version 1.2.3.
+
+        UX/UI Trends Data:
+        Trend: 'Glassmorphism is making a comeback in UI design'. Article: 'Top 10 UI trends for 2025'.
+
+        Provide a structured JSON output with keys: 'tech_trends', 'security_threats', 'ux_ui_trends'.
+        '
+2025-06-26 15:33:34,645 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: name 'json' is not defined
+Response was: Mock response for prompt: '
+        As the ultimate governance system (System 5) of an autonomous agent,
+        review the current policies, strategic environmental knowledge, and
+        long-term performance summary. Propose adaptations to the policies if necessary.
+
+        Current Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Strategic Knowledge from System 4:
+        {'tech_trends': [], 'security_threats': [], 'ux_ui_trends': []}
+
+        Performance Summary:
+        {'project_success_rate': '95%', 'common_failure_points': ['Integration testing between frontend and backend.', 'Dependency conflicts.'], 'areas_of_excellence': ['Generated code quality is high.', 'User requirement clarification is effective.']}
+
+        Based on this, should any policies be updated? If so, provide the updated
+        policy document as a structured JSON object. If not, respond with the original policies.
+        Your response should be only the JSON policy document.
+        '
+2025-06-26 15:33:34,645 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:33:34,645 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: name 'json' is not defined
+2025-06-26 15:33:34,645 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:33:34,645 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:33:34,645 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 2363205c-8d5c-4ae2-ada0-132ef3a83434
+2025-06-26 15:33:34,645 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:33:34,646 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:33:34,646 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:33:34,650 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 2363205c-8d5c-4ae2-ada0-132ef3a83434
+2025-06-26 15:33:34,650 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 2363205c-8d5c-4ae2-ada0-132ef3a83434
+2025-06-26 15:33:34,651 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:33:34,652 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:33:34,652 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:33:34,652 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:34,652 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: name 'json' is not defined
+Response was: Mock response for prompt: '
+        You are the S1.RequirementsElicitation Agent. Your task is to convert a user's request
+        into a structured, machine-readable format.
+
+        User Request: "Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide."
+
+        Based on this request and the agent's core policies, generate a detailed and structured
+        set of requirements. Consider potential ambiguities and ask implicit clarifying questions
+        to provide a comprehensive output.
+
+        Core Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Output the result as a JSON object with the following keys:
+        - "user_personas": A list of potential user types.
+        - "functional_requirements": A list of specific features (user stories).
+        - "non_functional_requirements": A list of constraints like performance, security, platform.
+        - "out_of_scope": A list of features that should not be included.
+        '
+2025-06-26 15:33:34,652 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: name 'json' is not defined
+2025-06-26 15:33:52,863 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:33:52,863 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:33:52,863 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:33:52,865 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: openai
+2025-06-26 15:33:52,865 - autonomous_app_writer.core.llm_services - WARNING - API key for openai is not configured.
+2025-06-26 15:33:52,865 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:33:53,167 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:33:53,168 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:33:53,170 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:33:53,170 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:33:53,170 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:33:53,170 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:33:53,170 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:33:53,170 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:33:53,170 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:33:53,170 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:33:53,170 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:33:53,170 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:33:53,170 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:33:53,170 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:33:53,170 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:33:53,170 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:33:53,171 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:33:53,171 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:53,171 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:33:53,171 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:53,171 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: Mock response for prompt: '
+        Analyze the following data collected from the software development environment.
+        Synthesize the key insights, trends, and actionable recommendations.
+
+        Tech Trends Data:
+        Article: 'Why Rust is the future of systems programming'. Trend: 'Adoption of memory-safe languages'.
+
+        Security Threats Data:
+        CVE-2025-XXXX: Critical vulnerability in popular 'json-parser' library version 1.2.3.
+
+        UX/UI Trends Data:
+        Trend: 'Glassmorphism is making a comeback in UI design'. Article: 'Top 10 UI trends for 2025'.
+
+        Provide a structured JSON output with keys: 'tech_trends', 'security_threats', 'ux_ui_trends'.
+        '
+2025-06-26 15:33:53,171 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        As the ultimate governance system (System 5) of an autonomous agent,
+        review the current policies, strategic environmental knowledge, and
+        long-term performance summary. Propose adaptations to the policies if necessary.
+
+        Current Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Strategic Knowledge from System 4:
+        {'tech_trends': [], 'security_threats': [], 'ux_ui_trends': []}
+
+        Performance Summary:
+        {'project_success_rate': '95%', 'common_failure_points': ['Integration testing between frontend and backend.', 'Dependency conflicts.'], 'areas_of_excellence': ['Generated code quality is high.', 'User requirement clarification is effective.']}
+
+        Based on this, should any policies be updated? If so, provide the updated
+        policy document as a structured JSON object. If not, respond with the original policies.
+        Your response should be only the JSON policy document.
+        '
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:33:53,171 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:33:53,172 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:33:53,172 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 8ae0e8ae-003a-4900-9db6-7b1fbef092b0
+2025-06-26 15:33:53,172 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:33:53,172 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:33:53,172 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:33:53,176 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 8ae0e8ae-003a-4900-9db6-7b1fbef092b0
+2025-06-26 15:33:53,176 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 8ae0e8ae-003a-4900-9db6-7b1fbef092b0
+2025-06-26 15:33:53,177 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:33:53,177 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:33:53,177 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:33:53,177 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:33:53,177 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        You are the S1.RequirementsElicitation Agent. Your task is to convert a user's request
+        into a structured, machine-readable format.
+
+        User Request: "Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide."
+
+        Based on this request and the agent's core policies, generate a detailed and structured
+        set of requirements. Consider potential ambiguities and ask implicit clarifying questions
+        to provide a comprehensive output.
+
+        Core Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Output the result as a JSON object with the following keys:
+        - "user_personas": A list of potential user types.
+        - "functional_requirements": A list of specific features (user stories).
+        - "non_functional_requirements": A list of constraints like performance, security, platform.
+        - "out_of_scope": A list of features that should not be included.
+        '
+2025-06-26 15:33:53,178 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:48:10,671 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:48:10,671 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:48:10,671 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:48:10,672 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:48:10,672 - autonomous_app_writer.core.llm_services - WARNING - API key for google is not configured.
+2025-06-26 15:48:10,672 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:48:11,133 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:48:11,134 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:48:11,136 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:48:11,136 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:48:11,136 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:48:11,136 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:48:11,136 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:48:11,136 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:48:11,136 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:48:11,136 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:48:11,137 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:48:11,137 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:48:11,137 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:48:11,137 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:48:11,137 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:48:11,137 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:48:11,137 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:48:11,137 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: SimpleScriptCoderAgent
+2025-06-26 15:48:11,137 - S1.SimpleScriptCoderAgent - INFO - S1 Agent 'SimpleScriptCoderAgent' initialized and registered.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:48:11,137 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:48:11,137 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:48:11,137 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: Mock response for prompt: '
+        Analyze the following data collected from the software development environment.
+        Synthesize the key insights, trends, and actionable recommendations.
+
+        Tech Trends Data:
+        Article: 'Why Rust is the future of systems programming'. Trend: 'Adoption of memory-safe languages'.
+
+        Security Threats Data:
+        CVE-2025-XXXX: Critical vulnerability in popular 'json-parser' library version 1.2.3.
+
+        UX/UI Trends Data:
+        Trend: 'Glassmorphism is making a comeback in UI design'. Article: 'Top 10 UI trends for 2025'.
+
+        Provide a structured JSON output with keys: 'tech_trends', 'security_threats', 'ux_ui_trends'.
+        '
+2025-06-26 15:48:11,138 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:48:11,138 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:48:11,138 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:48:11,138 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        As the ultimate governance system (System 5) of an autonomous agent,
+        review the current policies, strategic environmental knowledge, and
+        long-term performance summary. Propose adaptations to the policies if necessary.
+
+        Current Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Strategic Knowledge from System 4:
+        {'tech_trends': [], 'security_threats': [], 'ux_ui_trends': []}
+
+        Performance Summary:
+        {'project_success_rate': '95%', 'common_failure_points': ['Integration testing between frontend and backend.', 'Dependency conflicts.'], 'areas_of_excellence': ['Generated code quality is high.', 'User requirement clarification is effective.']}
+
+        Based on this, should any policies be updated? If so, provide the updated
+        policy document as a structured JSON object. If not, respond with the original policies.
+        Your response should be only the JSON policy document.
+        '
+2025-06-26 15:48:11,138 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:48:11,138 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:48:11,138 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:48:11,138 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 59174c72-e90b-462f-bbba-64bf8a9c72ff
+2025-06-26 15:48:11,138 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:48:11,138 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:48:11,138 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:48:11,143 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 59174c72-e90b-462f-bbba-64bf8a9c72ff
+2025-06-26 15:48:11,143 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 59174c72-e90b-462f-bbba-64bf8a9c72ff
+2025-06-26 15:48:11,148 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project (MVP)
+2025-06-26 15:48:11,149 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: get_requirements_mvp
+2025-06-26 15:48:11,149 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:48:11,149 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:48:11,149 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        You are the S1.RequirementsElicitation Agent. Your task is to convert a user's request
+        into a structured, machine-readable format.
+
+        User Request: "Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide."
+
+        Based on this request and the agent's core policies, generate a detailed and structured
+        set of requirements. Consider potential ambiguities and ask implicit clarifying questions
+        to provide a comprehensive output.
+
+        Core Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Output the result as a JSON object with the following keys:
+        - "user_personas": A list of potential user types.
+        - "functional_requirements": A list of specific features (user stories).
+        - "non_functional_requirements": A list of constraints like performance, security, platform.
+        - "out_of_scope": A list of features that should not be included.
+        '
+2025-06-26 15:48:11,149 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:49:18,726 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:49:18,726 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:49:18,726 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:49:18,726 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:49:18,726 - autonomous_app_writer.core.llm_services - WARNING - API key for google is not configured.
+2025-06-26 15:49:18,727 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:49:19,159 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:49:19,160 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:49:19,162 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:49:19,162 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:49:19,162 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:49:19,162 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:49:19,162 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:49:19,162 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:49:19,162 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:49:19,162 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:49:19,163 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:49:19,163 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:49:19,163 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:49:19,163 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:49:19,163 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:49:19,163 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:49:19,163 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:49:19,163 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:49:19,163 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:49:19,163 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:49:19,163 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:49:19,164 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:49:19,164 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: Mock response for prompt: '
+        Analyze the following data collected from the software development environment.
+        Synthesize the key insights, trends, and actionable recommendations.
+
+        Tech Trends Data:
+        Article: 'Why Rust is the future of systems programming'. Trend: 'Adoption of memory-safe languages'.
+
+        Security Threats Data:
+        CVE-2025-XXXX: Critical vulnerability in popular 'json-parser' library version 1.2.3.
+
+        UX/UI Trends Data:
+        Trend: 'Glassmorphism is making a comeback in UI design'. Article: 'Top 10 UI trends for 2025'.
+
+        Provide a structured JSON output with keys: 'tech_trends', 'security_threats', 'ux_ui_trends'.
+        '
+2025-06-26 15:49:19,164 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:49:19,164 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        As the ultimate governance system (System 5) of an autonomous agent,
+        review the current policies, strategic environmental knowledge, and
+        long-term performance summary. Propose adaptations to the policies if necessary.
+
+        Current Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Strategic Knowledge from System 4:
+        {'tech_trends': [], 'security_threats': [], 'ux_ui_trends': []}
+
+        Performance Summary:
+        {'project_success_rate': '95%', 'common_failure_points': ['Integration testing between frontend and backend.', 'Dependency conflicts.'], 'areas_of_excellence': ['Generated code quality is high.', 'User requirement clarification is effective.']}
+
+        Based on this, should any policies be updated? If so, provide the updated
+        policy document as a structured JSON object. If not, respond with the original policies.
+        Your response should be only the JSON policy document.
+        '
+2025-06-26 15:49:19,164 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:49:19,164 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:49:19,164 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:49:19,164 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:49:19,164 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 5581fcee-12b7-4931-bdb6-28ae58cb1622
+2025-06-26 15:49:19,164 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:49:19,165 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:49:19,165 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:49:19,169 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 5581fcee-12b7-4931-bdb6-28ae58cb1622
+2025-06-26 15:49:19,169 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 5581fcee-12b7-4931-bdb6-28ae58cb1622
+2025-06-26 15:49:19,170 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:49:19,170 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:49:19,170 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:49:19,171 - autonomous_app_writer.core.llm_services - ERROR - LLM API key not found. Returning mock response.
+2025-06-26 15:49:19,171 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+Response was: Mock response for prompt: '
+        You are the S1.RequirementsElicitation Agent. Your task is to convert a user's request
+        into a structured, machine-readable format.
+
+        User Request: "Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide."
+
+        Based on this request and the agent's core policies, generate a detailed and structured
+        set of requirements. Consider potential ambiguities and ask implicit clarifying questions
+        to provide a comprehensive output.
+
+        Core Policies:
+        {'agent_mission': 'Autonomously create robust, user-centric applications.', 'ethical_guidelines': {'data_privacy': 'Prioritize user data privacy and security.', 'responsible_ai': 'Ensure transparency and fairness in AI use.', 'security': 'Adhere to high security standards (e.g., OWASP Top 10).'}, 'development_philosophy': {'code_maintainability': 'Write clean, well-documented, and maintainable code.', 'component_sourcing': 'Favor well-maintained open-source components where appropriate.', 'testing': 'All code must have corresponding unit tests.'}, 'success_criteria': 'Deliver functional, tested, and documented applications that meet user requirements.'}
+
+        Output the result as a JSON object with the following keys:
+        - "user_personas": A list of potential user types.
+        - "functional_requirements": A list of specific features (user stories).
+        - "non_functional_requirements": A list of constraints like performance, security, platform.
+        - "out_of_scope": A list of features that should not be included.
+        '
+2025-06-26 15:49:19,171 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+2025-06-26 15:51:47,613 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:51:47,613 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:51:47,613 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:51:47,613 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:51:47,613 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:51:48,031 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:51:48,032 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:51:48,034 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:51:48,035 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:51:48,035 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:51:48,035 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:51:48,035 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:51:48,035 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:51:48,035 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:51:48,035 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:51:48,035 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:51:48,035 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:51:48,035 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:51:48,035 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:51:48,035 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:51:48,035 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:51:48,035 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:51:48,035 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:51:48,035 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:51:48,035 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:51:48,035 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:51:48,036 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:51:48,036 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:51:48,036 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: An error occurred during scan: name '_' is not defined
+Traceback (most recent call last):
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system4_intelligence_daemon.py", line 34, in run
+    self.perform_scan()
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system4_intelligence_daemon.py", line 70, in perform_scan
+    insights_str = self.llm_service.generate_text(prompt, model=config.DEFAULT_FAST_MODEL)
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/core/llm_services.py", line 59, in generate_text
+    _#     messages=[{"role": "user", "content": prompt}],
+NameError: name '_' is not defined
+2025-06-26 15:51:48,036 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: An error occurred during policy adaptation: name '_' is not defined
+Traceback (most recent call last):
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system5_policy_daemon.py", line 36, in run
+    self.review_and_adapt_policies()
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system5_policy_daemon.py", line 75, in review_and_adapt_policies
+    response_str = self.llm_service.generate_text(prompt, model=config.DEFAULT_MAIN_MODEL)
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/core/llm_services.py", line 59, in generate_text
+    _#     messages=[{"role": "user", "content": prompt}],
+NameError: name '_' is not defined
+2025-06-26 15:51:48,037 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:51:48,037 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: f70dca5b-0750-4b00-910a-d103682c9a9a
+2025-06-26 15:51:48,037 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:51:48,037 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:51:48,038 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:51:48,038 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:51:48,042 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project f70dca5b-0750-4b00-910a-d103682c9a9a
+2025-06-26 15:51:48,042 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project f70dca5b-0750-4b00-910a-d103682c9a9a
+2025-06-26 15:51:48,043 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:51:48,044 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:51:48,044 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:52:03,376 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:52:03,376 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:52:03,376 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:52:03,377 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:52:03,378 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:52:03,777 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:52:03,778 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:52:03,780 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:52:03,780 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:52:03,780 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:52:03,780 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:52:03,780 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:52:03,780 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:52:03,780 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:52:03,780 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:52:03,780 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:52:03,780 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:52:03,780 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:52:03,780 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:52:03,781 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:52:03,781 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:52:03,781 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:52:03,781 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        Analyze the following data collected from...'
+2025-06-26 15:52:03,781 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:52:03,781 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:52:03,781 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:52:03,782 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: e8a1e35b-ffdb-481d-b254-f6fedc9f48a8
+2025-06-26 15:52:03,782 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:52:03,782 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:52:03,782 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:52:03,786 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project e8a1e35b-ffdb-481d-b254-f6fedc9f48a8
+2025-06-26 15:52:03,786 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project e8a1e35b-ffdb-481d-b254-f6fedc9f48a8
+2025-06-26 15:52:03,788 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:52:03,788 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:52:03,788 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:52:03,788 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        You are the S1.RequirementsElicitation Ag...'
+2025-06-26 15:52:03,788 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: No JSON object found in the response.
+2025-06-26 15:53:08,729 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:53:08,729 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:53:08,729 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:53:08,729 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:53:08,730 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:53:09,171 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:53:09,172 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:53:09,174 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:53:09,174 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:53:09,174 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:53:09,174 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:53:09,174 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:53:09,174 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:53:09,174 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:53:09,174 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:53:09,174 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:53:09,175 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:53:09,175 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:53:09,175 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:53:09,175 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:53:09,175 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:53:09,175 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:53:09,175 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:53:09,175 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:53:09,175 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:53:09,175 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:53:09,175 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        Analyze the following data collected from...'
+2025-06-26 15:53:09,175 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:53:09,176 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 15:53:09,176 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 15:53:09,176 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 15:53:09,176 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:53:09,176 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:53:09,176 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 1193e00d-ba54-439a-b0c5-2528e0cc5bab
+2025-06-26 15:53:09,176 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:53:09,176 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:53:09,176 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:53:09,181 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 1193e00d-ba54-439a-b0c5-2528e0cc5bab
+2025-06-26 15:53:09,181 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 1193e00d-ba54-439a-b0c5-2528e0cc5bab
+2025-06-26 15:53:09,183 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:53:09,183 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:53:09,183 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:53:09,183 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        You are the S1.RequirementsElicitation Ag...'
+2025-06-26 15:53:09,183 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: No JSON object found in the response.
+2025-06-26 15:54:52,874 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:54:52,874 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:54:52,874 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:54:52,875 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:55:10,257 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:55:10,258 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:55:10,258 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:55:10,258 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:55:25,605 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:55:25,606 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:55:25,606 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:55:25,606 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:55:25,683 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:55:26,033 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:55:41,764 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:55:41,764 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:55:41,764 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:55:41,765 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:55:41,842 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:55:42,154 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:55:58,961 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:55:58,961 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:55:58,961 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:55:58,961 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:55:59,051 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:55:59,432 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:55:59,433 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:55:59,436 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:55:59,436 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:55:59,436 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:55:59,436 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:55:59,436 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:55:59,436 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:55:59,436 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:55:59,437 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:55:59,437 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:55:59,437 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:55:59,437 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:55:59,437 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:55:59,437 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:55:59,437 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:55:59,437 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: An error occurred during scan: 'System4IntelligenceDaemon' object has no attribute 'utils'
+Traceback (most recent call last):
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system4_intelligence_daemon.py", line 35, in run
+    self.perform_scan()
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system4_intelligence_daemon.py", line 50, in perform_scan
+    tech_data = self._scan_tech_trends()
+  File "/Users/misha/Desktop/vsm2/autonomous_app_writer/vsm_daemons/system4_intelligence_daemon.py", line 92, in _scan_tech_trends
+    content += self.utils.fetch_url_content(url) or ""
+AttributeError: 'System4IntelligenceDaemon' object has no attribute 'utils'
+2025-06-26 15:55:59,437 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:55:59,438 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 15:55:59,438 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
+2025-06-26 15:55:59,438 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 15:55:59,438 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:55:59,439 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 3e3cbce9-e1dc-4d17-9472-aa36d2eb16f7
+2025-06-26 15:55:59,439 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:55:59,439 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:55:59,439 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:55:59,444 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 3e3cbce9-e1dc-4d17-9472-aa36d2eb16f7
+2025-06-26 15:55:59,444 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 3e3cbce9-e1dc-4d17-9472-aa36d2eb16f7
+2025-06-26 15:55:59,446 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:55:59,446 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:55:59,446 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:55:59,446 - S1.RequirementsAgent - INFO - Requirements clarification, turn 1
+2025-06-26 15:55:59,446 - S1.RequirementsAgent - INFO - Requirements clarification, turn 2
+2025-06-26 15:55:59,446 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        You are the S1.RequirementsElicitation Ag...'
+2025-06-26 15:55:59,446 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: No JSON object found in the response.
+2025-06-26 15:56:17,596 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:56:17,597 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:56:17,597 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:56:17,597 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:56:17,687 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:56:18,026 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:56:18,027 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:56:18,030 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:56:18,030 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:56:18,030 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:56:18,030 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:56:18,030 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:56:18,030 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:56:18,030 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:56:18,030 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:56:18,030 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:56:18,030 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:56:18,030 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:56:18,030 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:56:18,030 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:56:18,030 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:56:18,030 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:56:18,030 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:56:18,031 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:56:18,031 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:56:18,031 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:56:18,031 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:56:18,031 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 15:56:18,031 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 15:56:18,031 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:56:18,032 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 3f98288f-1456-4496-8eae-9adec2024797
+2025-06-26 15:56:18,032 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:56:18,032 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:56:18,032 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:56:18,037 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 3f98288f-1456-4496-8eae-9adec2024797
+2025-06-26 15:56:18,037 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 3f98288f-1456-4496-8eae-9adec2024797
+2025-06-26 15:56:18,039 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:56:18,039 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:56:18,039 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:56:18,039 - S1.RequirementsAgent - INFO - Requirements clarification, turn 1
+2025-06-26 15:56:18,039 - S1.RequirementsAgent - INFO - Requirements clarification, turn 2
+2025-06-26 15:56:18,039 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        You are the S1.RequirementsElicitation Ag...'
+2025-06-26 15:56:18,039 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: No JSON object found in the response.
+2025-06-26 15:57:54,868 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 15:57:54,868 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 15:57:54,868 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 15:57:54,868 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 15:57:54,958 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 15:57:55,298 - __main__ - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 15:57:55,299 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 15:57:55,301 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 15:57:55,301 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 15:57:55,301 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 15:57:55,301 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 15:57:55,302 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 15:57:55,302 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 15:57:55,302 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 15:57:55,302 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 15:57:55,302 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 15:57:55,302 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 15:57:55,302 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 15:57:55,302 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 15:57:55,302 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 15:57:55,302 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 15:57:55,302 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 15:57:55,302 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 15:57:55,302 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 15:57:55,302 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 15:57:55,303 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 15:57:55,303 - __main__ - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 15:57:55,303 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 15:57:55,303 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 15:57:55,303 - __main__ - INFO - Received new development request: 'Create a simple command-line application in Python that acts as a calculator. It should be able to add, subtract, multiply, and divide.'
+2025-06-26 15:57:55,303 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 15:57:55,303 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 15:57:55,304 - autonomous_app_writer.project_tracker.project_state_manager - INFO - ProjectStateManager initialized for project: 504d8973-56de-46d1-b040-37d076869325
+2025-06-26 15:57:55,304 - autonomous_app_writer.core.langgraph_orchestrator - INFO - LangGraph orchestrator initialized with state: S3WorkflowState
+2025-06-26 15:57:55,304 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Set graph entry point to 'start_project'.
+2025-06-26 15:57:55,305 - autonomous_app_writer.core.langgraph_orchestrator - INFO - Compiling LangGraph workflow.
+2025-06-26 15:57:55,312 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 ProjectLifecycleManager initialized for project 504d8973-56de-46d1-b040-37d076869325
+2025-06-26 15:57:55,313 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3: Starting development lifecycle for project 504d8973-56de-46d1-b040-37d076869325
+2025-06-26 15:57:55,316 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: start_project
+2025-06-26 15:57:55,318 - autonomous_app_writer.vsm_system3_operations.project_lifecycle_manager - INFO - S3 Node: plan_and_design
+2025-06-26 15:57:55,318 - S1.RequirementsAgent - INFO - Executing requirements elicitation task.
+2025-06-26 15:57:55,318 - S1.RequirementsAgent - INFO - Requirements clarification, turn 1
+2025-06-26 15:57:55,318 - S1.RequirementsAgent - INFO - Requirements clarification, turn 2
+2025-06-26 15:57:55,318 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        You are the S1.RequirementsElicitation Ag...'
+2025-06-26 15:57:55,319 - S1.RequirementsAgent - ERROR - Failed to parse LLM response for requirements: No JSON object found in the response.
+2025-06-26 16:01:00,894 - autonomous_app_writer.core.agent_state - INFO - S5 policies loaded from vsm_knowledge_base/system5_policies.json
+2025-06-26 16:01:00,894 - autonomous_app_writer.core.agent_state - INFO - S4 knowledge loaded from vsm_knowledge_base/system4_knowledge.json
+2025-06-26 16:01:00,894 - autonomous_app_writer.core.agent_state - INFO - AgentState initialized.
+2025-06-26 16:01:00,895 - autonomous_app_writer.core.llm_services - INFO - Initializing LLM Service with provider: google
+2025-06-26 16:01:00,897 - autonomous_app_writer.core.algedonic_manager - INFO - Algedonic Manager initialized.
+2025-06-26 16:01:01,055 - autonomous_app_writer.main - INFO - --- AUTONOMOUS APP-WRITING AGENT INITIALIZING ---
+2025-06-26 16:01:01,056 - autonomous_app_writer.core.tool_interface - INFO - Tool Interface initialized.
+2025-06-26 16:01:01,058 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: RequirementsAgent
+2025-06-26 16:01:01,058 - S1.RequirementsAgent - INFO - S1 Agent 'RequirementsAgent' initialized and registered.
+2025-06-26 16:01:01,058 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: ArchitectureAgent
+2025-06-26 16:01:01,058 - S1.ArchitectureAgent - INFO - S1 Agent 'ArchitectureAgent' initialized and registered.
+2025-06-26 16:01:01,058 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UiUxAgent
+2025-06-26 16:01:01,058 - S1.UiUxAgent - INFO - S1 Agent 'UiUxAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: FrontendCoderAgent
+2025-06-26 16:01:01,059 - S1.FrontendCoderAgent - INFO - S1 Agent 'FrontendCoderAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: BackendCoderAgent
+2025-06-26 16:01:01,059 - S1.BackendCoderAgent - INFO - S1 Agent 'BackendCoderAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DatabaseAgent
+2025-06-26 16:01:01,059 - S1.DatabaseAgent - INFO - S1 Agent 'DatabaseAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: UnitTesterAgent
+2025-06-26 16:01:01,059 - S1.UnitTesterAgent - INFO - S1 Agent 'UnitTesterAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: IntegrationTesterAgent
+2025-06-26 16:01:01,059 - S1.IntegrationTesterAgent - INFO - S1 Agent 'IntegrationTesterAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: E2ETesterAgent
+2025-06-26 16:01:01,059 - S1.E2ETesterAgent - INFO - S1 Agent 'E2ETesterAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DeploymentAgent
+2025-06-26 16:01:01,059 - S1.DeploymentAgent - INFO - S1 Agent 'DeploymentAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: DocumentationAgent
+2025-06-26 16:01:01,059 - S1.DocumentationAgent - INFO - S1 Agent 'DocumentationAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.core.agent_state - INFO - Registered S1 capability: VersionControlAgent
+2025-06-26 16:01:01,059 - S1.VersionControlAgent - INFO - S1 Agent 'VersionControlAgent' initialized and registered.
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Intelligence Daemon initialized.
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Policy Daemon initialized.
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - System 4 Daemon starting its run loop.
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - System 5 Daemon starting its run loop.
+2025-06-26 16:01:01,059 - autonomous_app_writer.main - INFO - --- AGENT INITIALIZATION COMPLETE. READY FOR REQUESTS. ---
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Starting environmental scan.
+2025-06-26 16:01:01,059 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Starting policy review and adaptation cycle.
+2025-06-26 16:01:01,060 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        As the ultimate governance system (System...'
+2025-06-26 16:01:01,060 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - ERROR - S5: Failed to parse LLM response or update policies: No JSON object found in the response.
+2025-06-26 16:01:01,061 - autonomous_app_writer.vsm_daemons.system5_policy_daemon - INFO - S5: Policy review complete. Sleeping for 86400 seconds.
+2025-06-26 16:01:01,221 - httpx - INFO - HTTP Request: GET http://127.0.0.1:7860/startup-events "HTTP/1.1 200 OK"
+2025-06-26 16:01:01,231 - httpx - INFO - HTTP Request: HEAD http://127.0.0.1:7860/ "HTTP/1.1 200 OK"
+2025-06-26 16:01:01,256 - httpx - INFO - HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2025-06-26 16:01:01,341 - httpx - INFO - HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2025-06-26 16:01:01,477 - httpx - INFO - HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2025-06-26 16:01:04,680 - autonomous_app_writer.utils.network_utils - ERROR - Error fetching URL https://www.darkreading.com/: 403 Client Error: Forbidden for url: https://www.darkreading.com/
+2025-06-26 16:01:06,001 - autonomous_app_writer.core.llm_services - ERROR - Failed to parse JSON response: No JSON object found in the response.
+Response was: LLM (google/gemini-2.5-pro): Successfully processed prompt - '
+        Analyze the following data collected from...'
+2025-06-26 16:01:06,001 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - ERROR - S4: Failed to parse LLM response or update knowledge base: No JSON object found in the response.
+2025-06-26 16:01:06,001 - autonomous_app_writer.vsm_daemons.system4_intelligence_daemon - INFO - S4: Scan complete. Sleeping for 3600 seconds.
